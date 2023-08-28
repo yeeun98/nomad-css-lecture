@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first_rule_of_flexbox</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: peru;
+      color: white;
+    }
+
+    body {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    - first rule :: flexbox는 layout을 위해 box자체에 스타일을 부여하는 것이 아닌 box를 감싸고 있는 container에 layout을 지정한다.
+                 :: flexbox의 container는 다른 것의 부모가 될 수 없고 바로 붙어있는 부모여야 한다.
+  -->
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</body>
+</html>

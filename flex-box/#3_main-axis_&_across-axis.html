@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first_rule_of_flexbox</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: peru;
+      color: white;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    - flex-direction :: default - row (가로)
+    - justify-content :: 수평축에 있는 flex children의 위치를 변경하는 속성
+                      :: center - 가운데 정렬
+                      :: space-between - box들의 간격을 균일하게 띄움
+                      :: space-round - box 주변 옆 공간을 같게 만듦
+                      :: space-round - box 주변 옆 공간을 같게 만듦
+      - align-items :: flex-start(default) - 세로축에 가장 윗 부분으로 세로 정렬
+                    :: center - 세로 축 기준으로 가운데 정렬
+                    :: stretch - wrapper의 높이까지 가득 채워짐 (대신 box의 높이가 지정되어있으면 안됨)
+  
+      ex) flex-box : row
+      main axis는 가로축, cross axis는 세로축
+      main axis로 item 위치를 옮길 때는 justify-content
+      cross axis로 item 위치를 옮길 떄는 align-items
+  -->
+
+  <div class="wrapper">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</body>
+</html>
