@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>column and row</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: peru;
+      color: white;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      /** main axis */
+      justify-content: space-around;
+      /** cross axis */
+      align-items: center;
+      height: 50vh;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    flex-direction: row 이면, justify-content가 가로축 / align-items가 세로축이고
+    flex-direction: column 이면, justify-content가 세로축 / align-items가 가로축이다.
+    flex-direction: column 이면, align-items가 stretch일 때 width로 지정되어 있지 않아야 stretch가 제대로 작동하여 가로축을 가득 채우게 된다.
+  -->
+
+  <div class="wrapper">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-grow and flex-shrink</title>
+  <style>
+    .children {
+      width: 200px;
+      height: 200px;
+      background-color: peru;
+      color: white;
+      font-size: 50px;
+    }
+
+    .children:nth-child(2) {
+      background-color: #000;
+      flex-shrink: 1;
+    }
+
+    .father {
+      display: flex;
+      justify-content: space-around;
+      height: 200vh;
+    }
+  </style>
+</head>
+<body>
+  flex-grow & flex-shrink :: 자식에게 부여하는 속성
+
+  flex-shrink는 flex-wrap이 nowrap일 때 화면이 점점 작아지면서 자식들의 너비가 지정한 너비보다도 작아질 때 어떤 자식의 너비를 더 줄일건지 정하는 속성
+  flex-shrink의 default 값은 1이다.
+  만약 .children:nth-child(2)가 flex-shrink가 1이면 다른 자식들과 함께 1:1:1의 비율로 너비를 줄이게 되는데
+  .children:nth-child(2)가 flex-shrink가 2이면 다른 자식들에 비해 2배로 더 너비가 줄어들게 된다
+
+  flex-grow는 반대로 동일하게 작용한다.
+  flex-grow의 default는 0이다.
+  만약 .children:nth-child(2)가 flex-grow가 1이면 다른 자식들은 지정한 너비만큼만 갖고 남은 모든 너비를 2번째 자식이 전부 차지하게 된다.
+  만약 .children:nth-child(2)가 flex-grow가 2이고 .children:nth-child(3)이 flex-grow가 1이면 남은 공간들을 3등분하여 2번째 자식이 그 중 2를 가져가고 3번째 자식이 남는 공간의 3분의 1을 더 가져가게 된다.
+
+  <div class="father">
+    <div class="children">1</div>
+    <div class="children">2</div>
+    <div class="children">3</div>
+  </div>
+</body>
+</html>

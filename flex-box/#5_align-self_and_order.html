@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-self and order</title>
+  <style>
+    .children {
+      width: 200px;
+      height: 200px;
+      background-color: peru;
+      color: white;
+      font-size: 50px;
+    }
+
+    /* .children:nth-child(2) {
+      align-self: center;
+    }
+
+    .children:nth-child(3) {
+      align-self: flex-end;
+    } */
+
+    .children:nth-child(2) {
+      order: 1;
+    }
+
+    .father {
+      display: flex;
+      justify-content: space-around;
+      height: 200vh;
+    }
+  </style>
+</head>
+<body>
+  <!--   
+    align-self: cross axis이고 이 속성은 부모한테 속성을 지정해 자식에게 영향을 주는 것이 아닌 자식에게 직접 지정하여 각각의 위치를 지정할 수 있게하는 것이다. (children에게 부여해줄 수 있음)
+    ** align-self를 사용해서 각각 다르게 효과를 주고 싶으면 반드시 부모에게 높이가 지정되어 있어야 한다.
+
+    order: element의 순서를 바꿀 때 보통 html에서 앞뒤로 원하는 순서로 바꾸면 되지만 html를 수정할 수 없는데 순서는 바꾸고 싶을 때 사용한다.
+    만약 .children:nth-child(2)에 order를 1로 지정한다면 .children:nth-child(2)는 세개의 element 중에 가장 마지막으로 위치하게 된다.
+    그 이유는 다른 두 개의 element는 order를 지정하지 않았기 때문에 order가 0으로 되어있는데 2번째 element만이 order가 1로 가장 값이 높기 때문에 오름차순 정렬처럼 가장 뒤로 이동하게 된다.
+    (이것 역시 부모가 아닌 자식요소에 지정해주는 속성이다.)
+  -->
+
+  <div class="father">
+    <div class="children">1</div>
+    <div class="children">2</div>
+    <div class="children">3</div>
+  </div>
+</body>
+</html>
