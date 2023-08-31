@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-basis</title>
+  <style>
+    .children {
+      flex-basis: 200px;
+      height: 200px;
+      background-color: peru;
+      color: white;
+      font-size: 50px;
+    }
+
+    .children:nth-child(2) {
+      background-color: #000;
+    }
+
+    .father {
+      display: flex;
+      justify-content: space-around;
+      height: 200vh;
+    }
+  </style>
+</head>
+<body>
+  flex-basis (자식에게 부여하는 속성)
+  flex-basis는 width와 같다고 생각할 수 있지만 그렇지 않다.
+  element에게 처음 크기를 지정(너비가 찌그러지거나 늘어나기 전에)
+
+  만약 flex-direction이 column이라면 flex-basis는 element의 처음 height를 지정하는 것이 될 것이다.
+
+  <div class="father">
+    <div class="children">1</div>
+    <div class="children">2</div>
+    <div class="children">3</div>
+  </div>
+</body>
+</html>
