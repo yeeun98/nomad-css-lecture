@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shortcuts</title>
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: repeat(4, 100px);
+    }
+
+    .header {
+      background-color: #2ecc71;
+      /* grid-column: 1 / 5; */
+      grid-column: 1 / -1; 
+      /* 앞에서부터 줄을 셀 때 1,2,3...이렇게지만 뒤에서부터 줄을 셀 땐 맨 뒤부터 -1,-2,-3 이렇게 되기 때문에 -1까지라는건 맨끝까지 차지하겠다는 뜻! 계산하지않아도 되어서 좋음 */
+    }
+    .content {
+      background-color: #3498db;
+      grid-area: content;
+      /* grid-column: 1 / 4; */
+      grid-column: 1 / -2;
+      grid-row: span 2;
+    }
+    .nav {
+      background-color: #8e44ad;
+      grid-area: nav;
+      grid-row: span 2;
+    }
+    .footer{
+      background-color: orange;
+      grid-area: footer;
+      /* grid-column: 1 / -1; */
+      grid-column: span 4;
+    }
+  </style>
+</head>
+<body>
+  셀이 4개이고 줄은 다섯개인 상황에서 한 줄을 전부 차지하고 싶을 때
+  grid-column-start: 1, grid-column-end: 5라고 할 수 있지만 간결하게
+  grid-column: 시작값 / 마지막 값 -> grid-column: 1 / 5; 로 간결하게 표현할 수 있다.
+  
+  하지만 더 간결하게 셀이 많을 때를 고려하여 앞에서부터 줄을 셀 때 1,2,3...이렇게지만 뒤에서부터 줄을 셀 땐 맨 뒤부터 -1,-2,-3 이렇게 되기 때문에
+  grid-column: 1 / -1; 라고 작성하면 1부터 마지막 줄 까지 채우겠다고 계산없이도 지정할 수 있다.
+
+  이보다 더 간결하게 표현해보자면, span함수를 이용해 줄을 계산하는 것이 아닌 셀 자체로 계산해서 할 수도 있다.
+  grid-column: span 숫자; -> grid-column: span 4;
+  이것을 위와 적용해서 시작점 지정과 얼마만큼의 셀을 차지할건지 적을 수 있는데
+  grid-column: 2 / span 2; 라고 한다면 2번째 줄부터 시작해서 그것을 기준으로 두 개의 셀을 내가 차지할거야! 라는 것을 의미할 수 있다
+  
+  <div class="grid">
+    <div class="header">1</div>
+    <div class="content">2</div>
+    <div class="nav">3</div>
+    <div class="footer">4</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>life before grid</title>
+
+  <style>
+    .father {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .child {
+      background: peru;
+      color: white;
+      font-size: 50px;
+      display: flex;
+      flex-basis: 30%;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    grid없이 사용하면 grid 형태로 자식들을 분류하기가 매우 어려웠다.
+    만약 현재 아래 코드가 화면이 줄어들어 첫째줄에 세 개, 두번째줄에 두 박스가 위치한다고 가정하자.
+    첫째줄을 박스끼리 간격있게 배치하기 위해서 justify-content를 space-between로 지정하였는데 그러면 줄바꿈된 부분은 두 개가 완전히 서로 양끝으로 찢어지게 되어
+    grid로 만들고 싶었던 의도와 벗어나게 되고 줄끼리의 간격을 위해서도 아래줄의 박스들에게 margin-top을 줘야해서 불편하고 화면크기의 변화가 생기면 또 의도하지 않은 화면이 될 수 있기에 적합하지 않다.
+    이를 개선하기 위해 우리는 grid를 배워 익혀야 한다! 
+  -->
+  <div class="father">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+  </div>
+</body>
+</html>
