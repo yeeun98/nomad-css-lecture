@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid template areas</title>
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: repeat(4, 100px);
+    }
+
+    .header {
+      background-color: #2ecc71;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    .content {
+      background-color: #3498db;
+      grid-area: content;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+    .nav {
+      background-color: #8e44ad;
+      grid-area: nav;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+    .footer{
+      background-color: orange;
+      grid-area: footer;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  </style>
+</head>
+<body>
+  grid-column-start는 박스가 기준이 아닌 grid를 나누고 있는 줄을 기준으로 계산
+  grid-column-start가 1이고 grid-column-end가 3이면 1번째줄에서 시작해서 세번째줄에서 끝나는 것!
+
+  grid-row-start 역시 줄을 기준으로 start의 값부터 grid-row-end의 값까지 row를 차지하게 된다!
+  이것을 이용해 html없이 element의 앞 뒤 순서를 바꾸는 것 역시 가능하다.
+  <div class="grid">
+    <div class="header">1</div>
+    <div class="content">2</div>
+    <div class="nav">3</div>
+    <div class="footer">4</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid template areas</title>
+
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 200px);
+      /* grid-template-columns: 200px 200px 200px 200px; */
+      /* grid-template-rows: repeat(4, 300px); */
+      /* grid-template-rows: 300px 300px 300px 300px; */
+      grid-template-rows: 100px repeat(2, 200px) 300px;
+
+      grid-template-areas: 
+        "header header header header"
+        "content content content nav"
+        "content content content nav"
+        "footer footer footer footer"
+      ;
+    }
+
+    .header {
+      background-color: #2ecc71;
+      grid-area: header;
+    }
+    .content {
+      background-color: #3498db;
+      grid-area: content;
+    }
+    .nav {
+      background-color: #8e44ad;
+      grid-area: nav;
+    }
+    .footer{
+      background-color: orange;
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  grid-template-area는 직관적으로 어떻게 grid가 배치되어야 하는지 볼 수 있게 해준다.<br />
+  grid-temlplate-area를 쓸 때엔 자식들에게 grid-area를 사용해 본인이 어떤 grid인지 지정을 해줘야 부모 grid가 알아 챌 수 있다
+  <div class="grid">
+    <div class="header">1</div>
+    <div class="content">2</div>
+    <div class="nav">3</div>
+    <div class="footer">4</div>
+  </div>
+</body>
+</html>
