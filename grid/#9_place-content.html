@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>place-content</title>
+
+  <style>
+    .grid {
+      display: grid;
+      background: #000;
+      gap: 5px;
+      height: 250vh;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: repeat(4, 100px);
+      justify-content: end;
+      align-content: space-between;
+    }
+
+    .header {
+      background-color: #2ecc71;
+      width: 40px;
+      height: 40px;
+    }
+    .content {
+      background-color: #3498db;
+      width: 40px;
+      height: 40px;
+    }
+    .nav {
+      background-color: #8e44ad;
+      width: 40px;
+      height: 40px;
+    }
+    .footer{
+      background-color: orange;
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  content는 전체를 감싸는 한 줄을 기준으로 생각하면 되는데 
+  justify-content는 수평선에 있는 모든 items를 정해놓은 값으로 정렬하는 것이고,
+  align-content는 모든 줄들을 정해놓은 값으로 서로 떨어트리거나 붙혀놓는 등 이동시킬 수 있다.
+
+  <div class="grid">
+    <div class="header"></div>
+    <div class="content"></div>
+    <div class="nav"></div>
+    <div class="footer"></div>
+    <div class="header"></div>
+    <div class="content"></div>
+    <div class="nav"></div>
+    <div class="footer"></div>
+    <div class="header"></div>
+    <div class="content"></div>
+    <div class="nav"></div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>minmax</title>
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 5px;
+      grid-template-columns: repeat(5, minmax(100px, 1fr));
+      grid-template-rows: repeat(4, 100px);
+      grid-auto-flow: column;
+      
+    }
+
+    .item:nth-child(odd) {
+      background-color: #2ecc71;
+    }
+
+    .item:nth-child(even) {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  minmax는 얼마나 작게 얼마나 크게 element가 될 수 있는지 정하는 속성
+  1fr로 너비를 정해놓으면 줄어들 때 계속 매우 작은 크기로 줄어드는데 최소한 어느 정도의 크기는 되었으면 좋겠다! 싶을 때 쓰임
+  <div class="grid">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</body>
+</html>

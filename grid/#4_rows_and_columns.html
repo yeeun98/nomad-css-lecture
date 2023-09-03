@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>grid template areas</title>
+  <title>rows and columns</title>
 
   <style>
     .grid {
       display: grid;
-      gap: 10px;
       grid-template-columns: repeat(4, 100px);
       grid-template-rows: repeat(4, 100px);
     }
@@ -20,7 +19,6 @@
     }
     .content {
       background-color: #3498db;
-      grid-area: content;
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 2;
@@ -28,13 +26,11 @@
     }
     .nav {
       background-color: #8e44ad;
-      grid-area: nav;
       grid-row-start: 2;
       grid-row-end: 4;
     }
     .footer{
       background-color: orange;
-      grid-area: footer;
       grid-column-start: 1;
       grid-column-end: 5;
     }

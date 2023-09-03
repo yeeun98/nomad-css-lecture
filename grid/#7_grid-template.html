@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-template</title>
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 10px;
+      height: 50vh;
+      /**
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr); 
+      */
+      /** grid-template-rows를 사용하기 위해선 height 정해져있어야함 */
+      grid-template: 
+        "header header header header" 1fr
+        "content content content content nav" 2fr
+        "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr
+      ;
+    }
+
+    .header {
+      background-color: #2ecc71;
+      grid-area: header;
+    }
+    .content {
+      background-color: #3498db;
+      grid-area: content;
+    }
+    .nav {
+      background-color: #8e44ad;
+      grid-area: nav;
+    }
+    .footer{
+      background-color: orange;
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  fr : fraction(부분) -> 측정 단위
+
+  grid-template은 축약형의 제일 꼭데기에 있는 속성이라고 생각하면 됨
+  grid-template-areas처럼 한 눈에 어떻게 그리드가 위치할지 볼 수 있고 그 옆에 값을 통해
+  grid-template-rows와 grid-template-columns의 값을 지정할 수 있다.
+
+  단, grid-template에서는 repeat 함수를 쓸 수 없으니 이점은 유의!
+  그리고 grid-template-areas처럼 사용하기 때문에 grid-area를 통해 자식들이 본인의 이름을 정해놔야 이를 알고 배치할 수 있음
+  <div class="grid">
+    <div class="header">1</div>
+    <div class="content">2</div>
+    <div class="nav">3</div>
+    <div class="footer">4</div>
+  </div>
+</body>
+</html>
