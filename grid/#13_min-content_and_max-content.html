@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>min-content_and_max-content</title>
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 5px;
+      /* grid-template-columns: max-content min-content; */
+      grid-template-columns: repeat(5, minmax(max-content, 1fr));
+      grid-auto-rows: 100px;
+      margin-bottom: 30px;
+    }
+
+    .item:nth-child(odd) {
+      background-color: #2ecc71;
+    }
+
+    .item:nth-child(even) {
+      background-color: blue;
+    }
+
+    .grid:first-child {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .grid:last-child {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  </style>
+</head>
+<body>
+  max-content 셀이 안에 content를 다 덮는 크기 중 최소 크기
+  min-content는 작아질 수 있는 크기 중 가장 작은 크기
+
+  <div class="grid">
+    <div class="item">This is a very long text</div>
+    <div class="item">This is a very long text</div>
+  </div>
+</body>
+</html>

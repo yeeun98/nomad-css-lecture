@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>place-items</title>
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 5px;
+      height: 50vh;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      justify-items: end;
+    }
+
+    .header {
+      background-color: #2ecc71;
+      width: 40px;
+      height: 40px;
+    }
+    .content {
+      background-color: #3498db;
+      width: 40px;
+      height: 40px;
+    }
+    .nav {
+      background-color: #8e44ad;
+      width: 40px;
+      height: 40px;
+    }
+    .footer{
+      background-color: orange;
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  justify-items : stretch(default)
+  align-items: stretch(default)
+  grid는 기본적으로 셀이 지정한 너비와 높이를 가득채우는 것이 기본으로 되어있다.
+  하지만 start, center, end를 사용하게 되면 셀의 너비 혹은 높이는 셀의 콘텐츠를 감싸는 정도로만 줄어들게 되고 줄어든 셀이 정해 놓은 값으로 정렬된다.
+
+  place-items: align-items  justify-items; -> place-item : stretch center;
+  <div class="grid">
+    <div class="header"></div>
+    <div class="content"></div>
+    <div class="nav"></div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>
