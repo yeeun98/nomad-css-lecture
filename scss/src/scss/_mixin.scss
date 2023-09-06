@@ -1,0 +1,20 @@
+@mixin sexyTitle {
+  color: grey;
+  font-size: 40px;
+}
+
+@mixin link($color) {
+  text-decoration: none;
+  display: block;
+  color: $color
+}
+@mixin link2($word) {
+  text-decoration: none;
+  display: block;
+  @if $word == "odd" {
+    color: yellow;
+  }
+  @else {
+    color: green;
+  }
+}

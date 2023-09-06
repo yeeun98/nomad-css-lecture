@@ -1,0 +1,104 @@
+
+// #region Variables
+// @import "_variables";
+
+// body {
+//   background: $bg;
+// }
+// h1 {
+  //   color: $bg;
+  //   font-size: $title;
+  // }
+  // #endregion
+  
+// #region Nesting
+// .box {
+  //   margin-top: 20px;
+  // }
+
+// .box h2 {
+//   color: blue;
+// }
+
+// .box h2:hover {
+//   color: pink;
+// }
+
+// .box button {
+  //   color: violet;
+  // }
+  
+  // .box:hover {
+    //   background-color: aquamarine;
+    // }
+
+// .box {
+//   margin-top: 20px;
+//   &:hover {
+  //     background: aquamarine;
+  //   }
+
+//   h2 {
+//     color: blue;
+//     &:hover {
+  //       color: pink;
+  //     }
+//   }
+//   button {
+//     color: violet;
+//   }
+// }
+// #endregion Nesting
+
+// #region Mixin
+// @import "_mixin";
+
+// h1 {
+//   @include sexyTitle();
+// }
+// a {
+//   &:nth-child(odd) {
+//     @include link(yellow);
+//   }
+//   &:nth-child(even) {
+//     @include link2(even);
+//   }
+// }
+// #endregion
+
+// #region extends
+// @import "_extends";
+
+// a {
+//   @extend %button;
+//   text-decoration: none;
+// }
+
+// button {
+//   @extend %button;
+//   border: none;
+// }
+// #endregion
+
+// #region mixin-content
+@import "_mixins";
+
+// a{
+//   @include responsive {
+//     text-decoration: none;
+//   }
+// }
+
+h1 {
+  color: red;
+  @include responsive2("iphone"){
+    color: yellow;
+  }
+  @include responsive2("tablet"){
+    font-size: 40px;
+  }
+}
+
+// bourbon -> good mixin library
+// animate.scss -> check please...
+// #endregion
