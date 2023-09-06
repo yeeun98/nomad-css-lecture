@@ -11,7 +11,7 @@
       gap: 5px;
       grid-template-columns: repeat(4, 100px);
       grid-template-rows: repeat(4, 100px);
-      /* grid-auto-rows: 300px; */
+      grid-auto-rows: 300px;
       grid-auto-flow: column;
     }
 
@@ -21,6 +21,10 @@
 
     .item:nth-child(even) {
       background-color: blue;
+    }
+    .item:nth-child(5) {
+      align-self: flex-end;
+      height: 10px;
     }
   </style>
 </head>
