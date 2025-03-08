@@ -11,7 +11,7 @@ CSS 레이아웃의 핵심 개념과 실습 예제를 통해 다양한 레이아
 ### 1. **Flexbox**
 - Flexbox는 레이아웃을 위해 box 자체에 스타일을 주는 것이 아니라 **box를 감싸고 있는 container**에 layout을 지정함
 
-[🔗 Flexbox 강의 내용](./docs/flex-box)
+[🔗 Flexbox 강의 내용](./docs/flex-box.md)
   
 ---
 
@@ -19,14 +19,14 @@ CSS 레이아웃의 핵심 개념과 실습 예제를 통해 다양한 레이아
 - CSS Grid는 2차원 레이아웃 시스템으로, 행(row)과 열(column)을 동시에 제어하는 강력한 기능을 제공합니다.
 - 복잡한 레이아웃을 깔끔하게 구성하는 데 유용합니다.
 
-[🔗 Grid 강의 내용](./docs/grid)
+[🔗 Grid 강의 내용](./docs/grid.md)
 
 ---
 
 ### 4. **SCSS**
 - 복잡한 CSS 구조를 간결하고 가독성 높게 작성할 수 있음
 
-[🔗 SCSS 강의 내용](./docs/scss)
+[🔗 SCSS 강의 내용](./docs/scss.md)
 
 ---
 
